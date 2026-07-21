@@ -1,0 +1,142 @@
+{
+  "n_samples": 89,
+  "features_usadas": [
+    "upra_indice_total",
+    "upra_var_mensual_pct",
+    "upra_fertilizantes",
+    "upra_plaguicidas",
+    "ideam_precipitacion_mm",
+    "ideam_precipitacion_anomalia",
+    "ideam_temperatura_c",
+    "ideam_temperatura_anomalia"
+  ],
+  "kmeans": {
+    "n_clusters": 7,
+    "inercia": 180.5846,
+    "silhouette": 0.4115,
+    "davies_bouldin": 1.1269,
+    "calinski_harabasz": 40.2176
+  },
+  "dbscan": {
+    "eps": 0.8,
+    "min_samples": 3,
+    "n_clusters": 4,
+    "n_outliers": 53,
+    "pct_outliers": 59.55
+  },
+  "perfiles": {
+    "0": {
+      "cluster_id": 0,
+      "nombre": "🟢 Condiciones favorables",
+      "riesgo": "BAJA",
+      "n_periodos": 14,
+      "medianas": {
+        "upra_indice_total": 137.295,
+        "upra_var_mensual_pct": 1.264,
+        "upra_fertilizantes": 146.51,
+        "upra_plaguicidas": 118.545,
+        "ideam_precipitacion_mm": 149.15,
+        "ideam_precipitacion_anomalia": -0.85,
+        "ideam_temperatura_c": 22.76,
+        "ideam_temperatura_anomalia": 0.76
+      }
+    },
+    "1": {
+      "cluster_id": 1,
+      "nombre": "🟠 Riesgo moderado-alto: presión de precios",
+      "riesgo": "MEDIA-ALTA",
+      "n_periodos": 9,
+      "medianas": {
+        "upra_indice_total": 212.95,
+        "upra_var_mensual_pct": -0.692,
+        "upra_fertilizantes": 252.54,
+        "upra_plaguicidas": 153.11,
+        "ideam_precipitacion_mm": 143.1,
+        "ideam_precipitacion_anomalia": -6.9,
+        "ideam_temperatura_c": 22.27,
+        "ideam_temperatura_anomalia": 0.27
+      }
+    },
+    "2": {
+      "cluster_id": 2,
+      "nombre": "🟢 Condiciones favorables",
+      "riesgo": "BAJA",
+      "n_periodos": 13,
+      "medianas": {
+        "upra_indice_total": 146.01,
+        "upra_var_mensual_pct": 1.4,
+        "upra_fertilizantes": 154.76,
+        "upra_plaguicidas": 117.83,
+        "ideam_precipitacion_mm": 96.1,
+        "ideam_precipitacion_anomalia": -53.9,
+        "ideam_temperatura_c": 21.85,
+        "ideam_temperatura_anomalia": -0.15
+      }
+    },
+    "3": {
+      "cluster_id": 3,
+      "nombre": "🟢 Condiciones favorables",
+      "riesgo": "BAJA",
+      "n_periodos": 26,
+      "medianas": {
+        "upra_indice_total": 96.535,
+        "upra_var_mensual_pct": 0.151,
+        "upra_fertilizantes": 98.365,
+        "upra_plaguicidas": 93.475,
+        "ideam_precipitacion_mm": 75.6,
+        "ideam_precipitacion_anomalia": -74.4,
+        "ideam_temperatura_c": 22.01,
+        "ideam_temperatura_anomalia": 0.01
+      }
+    },
+    "4": {
+      "cluster_id": 4,
+      "nombre": "🟢 Condiciones favorables",
+      "riesgo": "BAJA",
+      "n_periodos": 16,
+      "medianas": {
+        "upra_indice_total": 145.93,
+        "upra_var_mensual_pct": 0.048,
+        "upra_fertilizantes": 161.71,
+        "upra_plaguicidas": 120.7,
+        "ideam_precipitacion_mm": 163.25,
+        "ideam_precipitacion_anomalia": 13.25,
+        "ideam_temperatura_c": 21.825,
+        "ideam_temperatura_anomalia": -0.175
+      }
+    },
+    "5": {
+      "cluster_id": 5,
+      "nombre": "🟠 Riesgo moderado-alto: presión de precios",
+      "riesgo": "MEDIA-ALTA",
+      "n_periodos": 5,
+      "medianas": {
+        "upra_indice_total": 188.6,
+        "upra_var_mensual_pct": 6.293,
+        "upra_fertilizantes": 226.78,
+        "upra_plaguicidas": 131.52,
+        "ideam_precipitacion_mm": 187.6,
+        "ideam_precipitacion_anomalia": 37.6,
+        "ideam_temperatura_c": 22.83,
+        "ideam_temperatura_anomalia": 0.83
+      }
+    },
+    "6": {
+      "cluster_id": 6,
+      "nombre": "🔴 Riesgo alto: precios altos + déficit hídrico",
+      "riesgo": "ALTA",
+      "n_periodos": 6,
+      "medianas": {
+        "upra_indice_total": 215.135,
+        "upra_var_mensual_pct": -1.321,
+        "upra_fertilizantes": 257.18,
+        "upra_plaguicidas": 148.555,
+        "ideam_precipitacion_mm": 114.3,
+        "ideam_precipitacion_anomalia": -35.7,
+        "ideam_temperatura_c": 21.225,
+        "ideam_temperatura_anomalia": -0.775
+      }
+    }
+  },
+  "entrenado_en": "2026-07-13T21:27:41.537090"
+}

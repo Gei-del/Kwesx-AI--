@@ -1,0 +1,16 @@
+{
+  "features_usadas": [
+    "upra_indice_total",
+    "upra_var_mensual_pct",
+    "upra_fertilizantes",
+    "upra_plaguicidas",
+    "ideam_precipitacion_mm",
+    "ideam_precipitacion_anomalia",
+    "ideam_temperatura_c",
+    "ideam_temperatura_anomalia"
+  ],
+  "n_muestras": 89,
+  "contamination": 0.1,
+  "n_estimators_if": 178,
+  "entrenado_en": "2026-07-13T21:27:59.669360"
+}

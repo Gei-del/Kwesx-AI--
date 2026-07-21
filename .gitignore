@@ -1,0 +1,146 @@
+# ============================================================
+# Kwesx AI — .gitignore
+# ============================================================
+
+# ── Python ───────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+.env/
+
+# ── Node / Frontend ──────────────────────────────────────────
+node_modules/
+.next/
+out/
+dist/
+.npm/
+.yarn/
+
+# ── Variables de entorno (NUNCA subir al repo) ───────────────
+.env
+.env.local
+.env.*.local
+.env.production
+.env.staging
+*.secret
+secrets/
+
+# ── ML / Modelos entrenados ──────────────────────────────────
+ml/models/*.pkl
+ml/models/*.joblib
+ml/models/*.h5
+ml/models/*.onnx
+!ml/models/.gitkeep
+
+# ── Datos (no subir datasets crudos ni procesados) ───────────
+data/01_raw/*
+data/02_external/*
+data/03_processed/*
+data/04_feature_store/*
+data/05_training/*
+data/06_validation/*
+data/07_predictions/*
+data/08_exports/*
+data/09_backups/*
+# Mantener estructura de carpetas con .gitkeep
+!data/**/.gitkeep
+!data/**/README.md
+# Legacy
+data/raw/*
+data/processed/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
+# ── Logs ─────────────────────────────────────────────────────
+logs/
+*.log
+*.log.*
+
+# ── Reportes y coverage ──────────────────────────────────────
+reports/
+htmlcov/
+.coverage
+.coverage.*
+coverage.xml
+*.cover
+
+# ── Testing ──────────────────────────────────────────────────
+.pytest_cache/
+.hypothesis/
+.tox/
+
+# ── Type checking ────────────────────────────────────────────
+.mypy_cache/
+.pytype/
+.pyre/
+
+# ── IDEs y editores ──────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.settings/
+*.sublime-workspace
+
+# ── Sistema operativo ────────────────────────────────────────
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# ── Sustentación (material del concurso — NO va al repo) ────
+sustentacion/
+
+# ── Docker ───────────────────────────────────────────────────
+docker-compose.override.yml
+
+# ── Temporales ───────────────────────────────────────────────
+tmp/
+temp/
+*.tmp
+*.temp
+*.bak
+*.backup
+*.orig
+
+# ── Jupyter ──────────────────────────────────────────────────
+.ipynb_checkpoints
+*.ipynb
+
+# ── Certificados (nunca subir claves privadas) ───────────────
+*.pem
+*.key
+*.crt
+*.p12
+*.pfx

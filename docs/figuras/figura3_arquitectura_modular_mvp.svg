@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 575" font-family="Arial, Helvetica, sans-serif">
+<rect x="0" y="0" width="1100" height="575" fill="#FFFFFF"/>
+<rect x="70.0" y="40" width="210" height="90" rx="14" ry="14" fill="#1B3B5F"/>
+<text x="175.0" y="78" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" fill="#FFFFFF" text-anchor="middle">Portal de</text>
+<text x="175.0" y="102" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" fill="#FFFFFF" text-anchor="middle">Datos</text>
+<line x1="280.0" y1="85.0" x2="310.0" y2="85.0" stroke="#1F2A30" stroke-width="3"/><polygon points="310.0,77.0 310.0,93.0 320.0,85.0" fill="#1F2A30"/>
+<rect x="320.0" y="40" width="210" height="90" rx="14" ry="14" fill="#155E63"/>
+<text x="425.0" y="78" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" fill="#FFFFFF" text-anchor="middle">Catálogo</text>
+<text x="425.0" y="102" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" fill="#FFFFFF" text-anchor="middle">Inteligente</text>
+<line x1="530.0" y1="85.0" x2="560.0" y2="85.0" stroke="#1F2A30" stroke-width="3"/><polygon points="560.0,77.0 560.0,93.0 570.0,85.0" fill="#1F2A30"/>
+<rect x="570.0" y="40" width="210" height="90" rx="14" ry="14" fill="#1B6B68"/>
+<text x="675.0" y="78" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" fill="#FFFFFF" text-anchor="middle">ETL</text>
+<text x="675.0" y="102" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" fill="#FFFFFF" text-anchor="middle">Automatizado</text>
+<line x1="780.0" y1="85.0" x2="810.0" y2="85.0" stroke="#1F2A30" stroke-width="3"/><polygon points="810.0,77.0 810.0,93.0 820.0,85.0" fill="#1F2A30"/>
+<rect x="820.0" y="40" width="210" height="90" rx="14" ry="14" fill="#2E8C84"/>
+<text x="925.0" y="78" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" fill="#FFFFFF" text-anchor="middle">Base</text>
+<text x="925.0" y="102" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" fill="#FFFFFF" text-anchor="middle">Territorial</text>
+<line x1="925.0" y1="130" x2="925.0" y2="220" stroke="#1F2A30" stroke-width="3"/><polygon points="917.0,220 933.0,220 925.0,230" fill="#1F2A30"/>
+<line x1="925.0" y1="230" x2="925.0" y2="240" stroke="#1F2A30" stroke-width="3"/>
+<line x1="925.0" y1="240" x2="150.0" y2="240" stroke="#1F2A30" stroke-width="2"/>
+<line x1="150.0" y1="240" x2="150.0" y2="270" stroke="#1F2A30" stroke-width="2"/><polygon points="142.0,270 158.0,270 150.0,280" fill="#1F2A30"/>
+<rect x="62.5" y="280" width="175" height="80" rx="14" ry="14" fill="#3FA796"/>
+<text x="150.0" y="327.0" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" fill="#FFFFFF" text-anchor="middle">IA</text>
+<line x1="925.0" y1="240" x2="350.0" y2="240" stroke="#1F2A30" stroke-width="2"/>
+<line x1="350.0" y1="240" x2="350.0" y2="270" stroke="#1F2A30" stroke-width="2"/><polygon points="342.0,270 358.0,270 350.0,280" fill="#1F2A30"/>
+<rect x="262.5" y="280" width="175" height="80" rx="14" ry="14" fill="#7FC8BC"/>
+<text x="350.0" y="327.0" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" fill="#1F2A30" text-anchor="middle">Mapas</text>
+<line x1="925.0" y1="240" x2="550.0" y2="240" stroke="#1F2A30" stroke-width="2"/>
+<line x1="550.0" y1="240" x2="550.0" y2="270" stroke="#1F2A30" stroke-width="2"/><polygon points="542.0,270 558.0,270 550.0,280" fill="#1F2A30"/>
+<rect x="462.5" y="280" width="175" height="80" rx="14" ry="14" fill="#2E8C84"/>
+<text x="550.0" y="327.0" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" fill="#FFFFFF" text-anchor="middle">Dashboard</text>
+<line x1="925.0" y1="240" x2="750.0" y2="240" stroke="#1F2A30" stroke-width="2"/>
+<line x1="750.0" y1="240" x2="750.0" y2="270" stroke="#1F2A30" stroke-width="2"/><polygon points="742.0,270 758.0,270 750.0,280" fill="#1F2A30"/>
+<rect x="662.5" y="280" width="175" height="80" rx="14" ry="14" fill="#F2A541"/>
+<text x="750.0" y="327.0" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" fill="#FFFFFF" text-anchor="middle">Alertas</text>
+<line x1="925.0" y1="240" x2="950.0" y2="240" stroke="#1F2A30" stroke-width="2"/>
+<line x1="950.0" y1="240" x2="950.0" y2="270" stroke="#1F2A30" stroke-width="2"/><polygon points="942.0,270 958.0,270 950.0,280" fill="#1F2A30"/>
+<rect x="862.5" y="280" width="175" height="80" rx="14" ry="14" fill="#155E63"/>
+<text x="950.0" y="327.0" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" fill="#FFFFFF" text-anchor="middle">Recomendaciones</text>
+<line x1="150.0" y1="360" x2="550.0" y2="445" stroke="#1F2A30" stroke-width="2"/>
+<line x1="350.0" y1="360" x2="550.0" y2="445" stroke="#1F2A30" stroke-width="2"/>
+<line x1="550.0" y1="360" x2="550.0" y2="445" stroke="#1F2A30" stroke-width="2"/>
+<line x1="750.0" y1="360" x2="550.0" y2="445" stroke="#1F2A30" stroke-width="2"/>
+<line x1="950.0" y1="360" x2="550.0" y2="445" stroke="#1F2A30" stroke-width="2"/>
+<rect x="390.0" y="450" width="320" height="95" rx="14" ry="14" fill="#1B3B5F"/>
+<text x="550.0" y="495" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" fill="#FFFFFF" text-anchor="middle">Asistente</text>
+<text x="550.0" y="522" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" fill="#FFFFFF" text-anchor="middle">Inteligente</text>
+</svg>

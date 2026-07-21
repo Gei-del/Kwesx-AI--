@@ -1,0 +1,78 @@
+# ============================================================
+# Kwesx AI — pyproject.toml
+# Configuración centralizada de herramientas Python
+# ============================================================
+
+[tool.black]
+line-length = 100
+target-version = ["py311"]
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.git
+  | \.mypy_cache
+  | \.pytest_cache
+  | __pycache__
+  | node_modules
+  | \.next
+  | ml/models
+)/
+'''
+
+[tool.isort]
+profile = "black"
+line_length = 100
+known_first_party = ["backend", "etl", "ml"]
+
+[tool.mypy]
+python_version = "3.11"
+warn_return_any = false
+warn_unused_configs = true
+ignore_missing_imports = true
+no_strict_optional = true
+exclude = ["ml/models/", "node_modules/", ".next/"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
+python_files = ["test_*.py", "*_test.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+markers = [
+    "unit: Pruebas unitarias (rápidas, sin dependencias externas)",
+    "integration: Pruebas de integración (requieren DB y API)",
+    "ml: Pruebas del modelo de Machine Learning",
+    "etl: Pruebas del pipeline ETL",
+    "slow: Pruebas lentas (>1 segundo)",
+]
+addopts = "-ra -q --tb=short"
+
+[tool.coverage.run]
+source = ["backend", "ml", "etl"]
+omit = [
+    "*/tests/*",
+    "*/migrations/*",
+    "ml/models/*",
+    "__pycache__/*",
+]
+
+[tool.coverage.report]
+show_missing = true
+skip_covered = false
+fail_under = 60
+
+[tool.flake8]
+max-line-length = 100
+extend-ignore = ["E203", "W503", "E501"]
+exclude = [
+    ".git",
+    "__pycache__",
+    ".mypy_cache",
+    "ml/models",
+    "node_modules",
+    ".next",
+]
+per-file-ignores = [
+    "backend/app/models/*.py:E501",
+    "etl/extractors/ani.py:E501",
+]

@@ -1,0 +1,28 @@
+services:
+  # ── API Backend (FastAPI) ────────────────────────────────────────────────
+  - type: web
+    name: kwesx-ai-api
+    runtime: python
+    region: oregon
+    plan: starter
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn backend.app.main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: kwesx-ai-db
+          property: connectionString
+      - key: ENVIRONMENT
+        value: production
+      - key: CORS_ORIGINS
+        value: https://kwesx-ai.vercel.app
+    healthCheckPath: /salud
+
+  # ── Base de datos PostgreSQL ─────────────────────────────────────────────
+databases:
+  - name: kwesx-ai-db
+    region: oregon
+    plan: starter
+    databaseName: kwesx_ai
+    user: kwesx
+    postgresMajorVersion: 15

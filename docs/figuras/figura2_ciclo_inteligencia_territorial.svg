@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 1000" font-family="Arial, Helvetica, sans-serif">
+<rect x="0" y="0" width="1100" height="1000" fill="#FFFFFF"/>
+<text x="550.0" y="470.0" font-size="22" font-weight="700" fill="#1F2A30" text-anchor="middle">CICLO DE</text>
+<text x="550.0" y="502.0" font-size="22" font-weight="700" fill="#1F2A30" text-anchor="middle">INTELIGENCIA</text>
+<text x="550.0" y="534.0" font-size="22" font-weight="700" fill="#1F2A30" text-anchor="middle">TERRITORIAL</text>
+<path d="M 550.0,120.0 Q 716.0610068762095,135.170766085205 831.4593336884907,255.54367133085594" fill="none" stroke="#1F2A30" stroke-width="3" marker-end="url(#arrow)"/>
+<path d="M 831.4593336884907,255.54367133085594 Q 923.1356954236287,394.8342124575262 900.9740483854565,560.1075362242732" fill="none" stroke="#1F2A30" stroke-width="3" marker-end="url(#arrow)"/>
+<path d="M 900.9740483854565,560.1075362242732 Q 849.2315947359887,718.629233914795 706.1981460823209,804.3487924448709" fill="none" stroke="#1F2A30" stroke-width="3" marker-end="url(#arrow)"/>
+<path d="M 706.1981460823209,804.3487924448709 Q 550.0,862.7315750849477 393.80185391767907,804.3487924448709" fill="none" stroke="#1F2A30" stroke-width="3" marker-end="url(#arrow)"/>
+<path d="M 393.80185391767907,804.3487924448709 Q 250.76840526401134,718.629233914795 199.0259516145435,560.1075362242732" fill="none" stroke="#1F2A30" stroke-width="3" marker-end="url(#arrow)"/>
+<path d="M 199.0259516145435,560.1075362242732 Q 176.86430457637113,394.83421245752623 268.54066631150926,255.543671330856" fill="none" stroke="#1F2A30" stroke-width="3" marker-end="url(#arrow)"/>
+<path d="M 268.54066631150926,255.543671330856 Q 383.9389931237905,135.17076608520506 550.0,120.0" fill="none" stroke="#1F2A30" stroke-width="3" marker-end="url(#arrow)"/>
+<defs>
+  <marker id="arrow" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto" markerUnits="strokeWidth">
+    <path d="M0,0 L0,6 L6,3 z" fill="#1F2A30"/>
+  </marker>
+</defs>
+<circle cx="550.0" cy="120.0" r="100" fill="#1B3B5F"/>
+<text x="550.0" y="118.0" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" fill="#FFFFFF" text-anchor="middle">Datos</text>
+<text x="550.0" y="140.0" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" fill="#FFFFFF" text-anchor="middle">abiertos</text>
+<circle cx="831.4593336884907" cy="255.54367133085594" r="100" fill="#155E63"/>
+<text x="831.4593336884907" y="253.54367133085594" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" fill="#FFFFFF" text-anchor="middle">Integración</text>
+<text x="831.4593336884907" y="275.54367133085594" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" fill="#FFFFFF" text-anchor="middle">ETL</text>
+<circle cx="900.9740483854565" cy="560.1075362242732" r="100" fill="#1B6B68"/>
+<text x="900.9740483854565" y="558.1075362242732" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" fill="#FFFFFF" text-anchor="middle">Análisis</text>
+<text x="900.9740483854565" y="580.1075362242732" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" fill="#FFFFFF" text-anchor="middle">Territorial</text>
+<circle cx="706.1981460823209" cy="804.3487924448709" r="100" fill="#2E8C84"/>
+<text x="706.1981460823209" y="802.3487924448709" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" fill="#FFFFFF" text-anchor="middle">Modelos</text>
+<text x="706.1981460823209" y="824.3487924448709" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" fill="#FFFFFF" text-anchor="middle">de IA</text>
+<circle cx="393.80185391767907" cy="804.3487924448709" r="100" fill="#3FA796"/>
+<text x="393.80185391767907" y="811.3487924448709" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" fill="#FFFFFF" text-anchor="middle">Visualización</text>
+<circle cx="199.0259516145435" cy="560.1075362242732" r="100" fill="#7FC8BC"/>
+<text x="199.0259516145435" y="567.1075362242732" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" fill="#1F2A30" text-anchor="middle">Recomendaciones</text>
+<circle cx="268.54066631150926" cy="255.543671330856" r="100" fill="#F2A541"/>
+<text x="268.54066631150926" y="253.543671330856" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" fill="#FFFFFF" text-anchor="middle">Toma de</text>
+<text x="268.54066631150926" y="275.543671330856" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" fill="#FFFFFF" text-anchor="middle">decisiones</text>
+</svg>

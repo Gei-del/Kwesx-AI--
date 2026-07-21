@@ -1,0 +1,39 @@
+{
+  "n_train": 71,
+  "n_test": 18,
+  "cv_folds": 5,
+  "cv_f1_mean": 0.4001,
+  "cv_f1_std": 0.1213,
+  "accuracy": 0.8889,
+  "clases_presentes": [
+    "BAJA",
+    "MEDIA",
+    "ALTA"
+  ],
+  "distribucion": {
+    "BAJA": 42,
+    "MEDIA": 41,
+    "ALTA": 6
+  },
+  "feature_importances": {
+    "upra_indice_total": 0.2398,
+    "upra_var_mensual_pct": 0.091,
+    "upra_fertilizantes": 0.2633,
+    "upra_plaguicidas": 0.1406,
+    "ideam_precipitacion_mm": 0.0452,
+    "ideam_precipitacion_anomalia": 0.0438,
+    "ideam_temperatura_c": 0.0415,
+    "ideam_temperatura_anomalia": 0.0381,
+    "mes": 0.0518,
+    "anio": 0.0449
+  },
+  "thresholds": {
+    "media": 25.0,
+    "alta": 42.0
+  },
+  "labels": {
+    "0": "BAJA",
+    "1": "MEDIA",
+    "2": "ALTA"
+  }
+}

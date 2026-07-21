@@ -1,0 +1,55 @@
+# ============================================================
+# Kwesx AI — Dockerfile de producción (multi-stage)
+# ============================================================
+
+# ── Stage 1: Builder ─────────────────────────────────────────
+FROM python:3.11-slim AS builder
+
+WORKDIR /app
+
+# Instalar dependencias del sistema
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    build-essential \
+    libpq-dev \
+    && rm -rf /var/lib/apt/lists/*
+
+# Copiar requirements e instalar (cacheado si no cambian)
+COPY requirements.txt .
+RUN pip install --no-cache-dir --user -r requirements.txt
+
+# ── Stage 2: Runtime ─────────────────────────────────────────
+FROM python:3.11-slim AS runtime
+
+WORKDIR /app
+
+# Instalar solo libpq en runtime (PostgreSQL client)
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    libpq5 \
+    && rm -rf /var/lib/apt/lists/*
+
+# Copiar dependencias del builder
+COPY --from=builder /root/.local /root/.local
+ENV PATH=/root/.local/bin:$PATH
+
+# Copiar código de la aplicación
+COPY backend/ ./backend/
+COPY ml/ ./ml/
+COPY etl/ ./etl/
+
+# Usuario no-root para seguridad
+RUN useradd --create-home --no-log-init appuser
+USER appuser
+
+# Variables de entorno de producción
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1 \
+    ENVIRONMENT=production \
+    PORT=8000
+
+EXPOSE 8000
+
+# Health check
+HEALTHCHECK --interval=30s --timeout=10s --start-period=40s --retries=3 \
+    CMD python -c "import urllib.request; urllib.request.urlopen('http://localhost:${PORT}/salud')"
+
+CMD ["sh", "-c", "uvicorn backend.app.main:app --host 0.0.0.0 --port ${PORT} --workers 2"]

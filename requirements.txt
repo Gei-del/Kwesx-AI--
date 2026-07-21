@@ -1,0 +1,44 @@
+# ============================================================
+# Kwesx AI — Dependencias Python
+# Instalar con: pip install -r requirements.txt
+# ============================================================
+
+# --- API y servidor ---
+fastapi==0.111.1
+uvicorn[standard]==0.30.1
+python-multipart==0.0.9
+
+# --- Base de datos ---
+sqlalchemy==2.0.31
+asyncpg==0.29.0          # driver async para PostgreSQL
+psycopg2-binary==2.9.9   # driver sync (migraciones, scripts ETL)
+alembic==1.13.2          # migraciones de esquema
+
+# --- ETL y datos ---
+requests==2.32.3         # llamadas a la API Socrata (datos.gov.co)
+pandas==2.2.2
+numpy==1.26.4
+
+# --- Geoespacial ---
+geopandas==0.14.4
+shapely==2.0.5
+
+# --- ML ---
+scikit-learn==1.5.1
+xgboost==2.1.0
+shap==0.45.1              # Explainable AI (SHAP values)
+statsmodels==0.14.2       # ARIMA, Holt-Winters, decomposición estacional
+scipy==1.13.1             # Estadísticas, distancias, distribuciones
+joblib==1.4.2             # Serialización de modelos (explícito)
+
+# --- Config y utilidades ---
+python-dotenv==1.0.1
+pydantic==2.8.2
+pydantic-settings==2.3.4
+httpx==0.27.0            # cliente HTTP async para FastAPI
+
+# --- Rate limiting y seguridad ---
+slowapi==0.1.9            # Rate limiting para FastAPI (middleware)
+
+# --- Logging y monitoreo ---
+loguru==0.7.2

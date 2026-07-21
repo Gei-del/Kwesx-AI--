@@ -1,0 +1,43 @@
+{
+  "modelo": "EnsembleIVT (RF 0.45 + XGBoost 0.55)",
+  "n_train": 71,
+  "n_test": 18,
+  "cv_folds": 5,
+  "cv_f1_macro_mean": 0.4934,
+  "cv_f1_macro_std": 0.0778,
+  "accuracy_test": 0.7222,
+  "f1_macro_test": 0.5123,
+  "clases": [
+    "BAJA",
+    "MEDIA",
+    "ALTA"
+  ],
+  "distribucion": {
+    "BAJA": 40,
+    "MEDIA": 41,
+    "ALTA": 8
+  },
+  "thresholds": {
+    "media": 25.0,
+    "alta": 42.0
+  },
+  "feature_importances": {
+    "upra_indice_total": 0.1916,
+    "upra_var_mensual_pct": 0.1269,
+    "upra_fertilizantes": 0.221,
+    "upra_plaguicidas": 0.1167,
+    "ideam_precipitacion_mm": 0.0551,
+    "ideam_precipitacion_anomalia": 0.0603,
+    "ideam_temperatura_c": 0.0454,
+    "ideam_temperatura_anomalia": 0.045,
+    "mes": 0.1084,
+    "anio": 0.0296
+  },
+  "metricas_individuales": {
+    "rf_f1_macro": 0.7059,
+    "rf_accuracy": 0.7222,
+    "xgb_f1_macro": 0.7481,
+    "xgb_accuracy": 0.7778
+  },
+  "entrenado_en": "2026-07-13T21:27:22.860055"
+}

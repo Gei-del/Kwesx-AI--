@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 980" font-family="Arial, Helvetica, sans-serif">
+<rect x="0" y="0" width="1100" height="980" fill="#FFFFFF"/>
+<rect x="60.0" y="35" width="980" height="95" rx="14" ry="14" fill="#1B3B5F"/>
+<text x="550.0" y="73" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" fill="#FFFFFF" text-anchor="middle">USUARIOS</text>
+<text x="550.0" y="103" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" fill="#FFFFFF" text-anchor="middle">Ciudadanos · Estudiantes · Investigadores · Empresas · Entidades de gobierno</text>
+<line x1="550.0" y1="130" x2="550.0" y2="148" stroke="#1F2A30" stroke-width="3"/><polygon points="542.0,148 558.0,148 550.0,158" fill="#1F2A30"/>
+<rect x="60.0" y="158" width="980" height="95" rx="14" ry="14" fill="#155E63"/>
+<text x="550.0" y="196" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" fill="#FFFFFF" text-anchor="middle">Capa 1 · Arquitectura Funcional</text>
+<text x="550.0" y="226" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" fill="#FFFFFF" text-anchor="middle">Asistente Inteligente · Dashboard Territorial · Explorador de Datasets</text>
+<line x1="550.0" y1="253" x2="550.0" y2="271" stroke="#1F2A30" stroke-width="3"/><polygon points="542.0,271 558.0,271 550.0,281" fill="#1F2A30"/>
+<rect x="60.0" y="281" width="980" height="95" rx="14" ry="14" fill="#1B6B68"/>
+<text x="550.0" y="319" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" fill="#FFFFFF" text-anchor="middle">Capa 2 · Arquitectura de Datos</text>
+<text x="550.0" y="349" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" fill="#FFFFFF" text-anchor="middle">Fuentes oficiales · Motor ETL · Modelo Territorial Unificado</text>
+<line x1="550.0" y1="376" x2="550.0" y2="394" stroke="#1F2A30" stroke-width="3"/><polygon points="542.0,394 558.0,394 550.0,404" fill="#1F2A30"/>
+<rect x="60.0" y="404" width="980" height="95" rx="14" ry="14" fill="#2E8C84"/>
+<text x="550.0" y="442" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" fill="#FFFFFF" text-anchor="middle">Capa 3 · Arquitectura de IA</text>
+<text x="550.0" y="472" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" fill="#FFFFFF" text-anchor="middle">Modelos predictivos · PLN · Explainable AI (XAI)</text>
+<line x1="550.0" y1="499" x2="550.0" y2="517" stroke="#1F2A30" stroke-width="3"/><polygon points="542.0,517 558.0,517 550.0,527" fill="#1F2A30"/>
+<rect x="60.0" y="527" width="980" height="95" rx="14" ry="14" fill="#3FA796"/>
+<text x="550.0" y="565" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" fill="#FFFFFF" text-anchor="middle">Capa 4 · Arquitectura Geoespacial</text>
+<text x="550.0" y="595" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" fill="#FFFFFF" text-anchor="middle">PostGIS · GeoPandas · Mapas interactivos (Leaflet)</text>
+<line x1="550.0" y1="622" x2="550.0" y2="640" stroke="#1F2A30" stroke-width="3"/><polygon points="542.0,640 558.0,640 550.0,650" fill="#1F2A30"/>
+<rect x="60.0" y="650" width="980" height="95" rx="14" ry="14" fill="#7FC8BC"/>
+<text x="550.0" y="688" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" fill="#1F2A30" text-anchor="middle">Capa 5 · Arquitectura Tecnológica</text>
+<text x="550.0" y="718" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" fill="#1F2A30" text-anchor="middle">FastAPI · Next.js / React · PostgreSQL</text>
+<line x1="550.0" y1="745" x2="550.0" y2="763" stroke="#1F2A30" stroke-width="3"/><polygon points="542.0,763 558.0,763 550.0,773" fill="#1F2A30"/>
+<rect x="60.0" y="773" width="980" height="95" rx="14" ry="14" fill="#F2A541"/>
+<text x="550.0" y="811" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" fill="#1F2A30" text-anchor="middle">Capa 6 · Seguridad, Gobernanza e Infraestructura</text>
+<text x="550.0" y="841" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" fill="#1F2A30" text-anchor="middle">Control de versiones · Trazabilidad · Despliegue cloud</text>
+</svg>
