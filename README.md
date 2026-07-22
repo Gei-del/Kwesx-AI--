@@ -1,66 +1,192 @@
-# 🌎 Kwesx AI — Inteligencia Territorial para Colombia
-
 <div align="center">
 
-[![Python](https://img.shields.io/badge/Python-3.11+-3776AB?logo=python&logoColor=white)](https://python.org)
+# 🌎 Kwesx AI
+
+### Inteligencia territorial que traduce los datos abiertos de Colombia al lenguaje de quien decide
+
+*«Kwesx» significa «nosotros» en lengua nasa. Este proyecto es para todos.*
+
+<br>
+
+[![Datos al Ecosistema 2026](https://img.shields.io/badge/Datos%20al%20Ecosistema-2026%20·%20Nivel%20Intermedio-orange?style=for-the-badge)](https://datos.gov.co)
+
+[![Python](https://img.shields.io/badge/Python-3.11-3776AB?logo=python&logoColor=white)](https://python.org)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.111-009688?logo=fastapi)](https://fastapi.tiangolo.com)
 [![Next.js](https://img.shields.io/badge/Next.js-14-000000?logo=nextdotjs)](https://nextjs.org)
-[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-15+PostGIS-336791?logo=postgresql)](https://postgresql.org)
-[![Docker](https://img.shields.io/badge/Docker-Compose-2496ED?logo=docker)](https://docker.com)
-[![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
-[![Concurso](https://img.shields.io/badge/Datos%20al%20Ecosistema-2026%20Nivel%20Intermedio-orange)](https://datos.gov.co)
-
-**Plataforma de inteligencia territorial impulsada por IA y datos abiertos de Colombia.**
-Diseñada para ser usada por cualquier persona — desde campesinos hasta investigadores.
-
-[⚡ Instalación](#instalación-rápida) · [🏗 Arquitectura](#arquitectura) · [📖 Docs](docs/) · [🤝 Contribuir](CONTRIBUTING.md)
+[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-15%20+%20PostGIS-336791?logo=postgresql)](https://postgresql.org)
+[![WCAG 2.2 AA](https://img.shields.io/badge/Accesibilidad-WCAG%202.2%20AA-2ea44f)](https://www.w3.org/WAI/WCAG22/quickref/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green)](LICENSE)
 
 </div>
 
 ---
 
-## ¿Qué es Kwesx AI?
+<div align="center">
 
-Kwesx AI convierte datos abiertos del gobierno colombiano en **inteligencia territorial comprensible** para ciudadanos, campesinos, funcionarios e investigadores.
+### 🎤 ¿Eres del jurado? Empieza por aquí
 
-El usuario **nunca consulta una base de datos**. Conversa con un experto que conoce su territorio.
+**📊 Presentación del proyecto (pitch deck · 15 diapositivas):**
+### 👉 [`docs/figuras/Presentación Kwesx IA.pptx`](docs/figuras/Presentaci%C3%B3n%20Kwesx%20IA.pptx)
 
-### Fuentes de datos integradas
+*GitHub no previsualiza PowerPoint. Ábrela con «Download» / «View raw», o descárgala del repositorio.*
 
-| Fuente | Dataset ID | Descripción | Cobertura |
-|--------|-----------|-------------|-----------|
-| **ANI** | `8yi9-t44c` | Tráfico vehicular en peajes nacionales | ~151,000 registros |
-| **UPRA** | `gwbi-fnzs` | Índice mensual de precios de insumos agrícolas | 89 meses (2018-2026) |
-| **IDEAM Precipitación** | `s54a-sgyg` | Lluvia diaria por estación hidrometeorológica | Nacional |
-| **IDEAM Temperatura** | `sbwg-7ju4` | Temperatura diaria por estación | Nacional |
-
-### Capacidades de IA
-
-- 🧠 **Modelo IVT**  — Índice de Vulnerabilidad Territorial (Random Forest, 3 clases: BAJA/MEDIA/ALTA)
-- 💬 **Asistente Conversacional** — NLP en español colombiano con intención + entidades
-- 📊 **Feature Engineering Auditado** — Cruza UPRA + IDEAM con patrones estacionales reales
-- 🗺️ **Mapa Territorial Interactivo** — Leaflet con estaciones climáticas georreferenciadas
-- 🔮 **Simulador de Escenarios** — Qué pasa con el IVT si la lluvia cae 50% y los precios suben 10%
-- ♿ **Accesibilidad Universal** — WCAG 2.2 AA, Modo Fácil, voz, alto contraste, fuentes grandes
+</div>
 
 ---
 
-## Instalación rápida
+> **Doña Carmen cultiva yuca y maíz en Norte de Santander.**
+> Un día los fertilizantes subieron **18 %** sin que ella lo supiera. El dato **sí** estaba publicado en datos.gov.co — pero en un formato técnico que nadie en el campo podía leer. Perdió el **40 %** de su cosecha.
+>
+> **El problema no es que los datos no existan. Es que nunca llegan a quien los necesita.**
+> Es un problema de traducción, no de tecnología. Ese vacío es el que Kwesx AI existe para cerrar.
+
+---
+
+## ¿Qué es Kwesx AI?
+
+Kwesx AI convierte datos abiertos del Estado colombiano en **inteligencia territorial comprensible**: toma cinco fuentes oficiales, las cruza en un solo modelo por municipio usando el **Código DANE** como llave maestra, las pasa por cinco modelos de IA y entrega el resultado en dos idiomas — el del analista y el del campesino.
+
+El usuario **nunca consulta una base de datos.** Le pregunta a un sistema que conoce su territorio.
+
+> **No es un dashboard. No es un chatbot. Es inteligencia territorial:** información contextualizada, predictiva y traducida.
+
+<div align="center">
+<br>
+<img src="docs/figuras/figura2_ciclo_inteligencia_territorial.png" alt="Ciclo de inteligencia territorial: del dato crudo a la decisión" width="760">
+<br>
+<em>Del API oficial a la decisión del ciudadano — el ciclo de inteligencia territorial.</em>
+<br><br>
+</div>
+
+---
+
+## ⚙️ Qué hace de verdad hoy
+
+Este repositorio **no es una maqueta.** Los cinco modelos están **implementados y entrenados** (última corrida: 13 jul 2026) y el frontend consume sus endpoints.
+
+| Módulo | Técnica | Qué entrega | Estado |
+|---|---|---|:--:|
+| **Predicción IVT** | Ensemble Random Forest + XGBoost | Índice de Vulnerabilidad Territorial: `BAJA` · `MEDIA` · `ALTA` | ✅ |
+| **Clustering territorial** | KMeans + DBSCAN | Agrupa períodos/territorios en 7 perfiles de riesgo | ✅ |
+| **Forecasting de precios** | Holt-Winters + SARIMA | Proyección de índices a 6 meses | ✅ |
+| **Detección de anomalías** | Isolation Forest | Alertas ante cifras atípicas | ✅ |
+| **Explicabilidad (XAI)** | SHAP | Justifica cada predicción — no es una caja negra | ✅ |
+| **Asistente conversacional** | TF-IDF + similitud coseno *(keyword como respaldo)* | Interpreta preguntas en español y responde con datos | ✅ |
+
+Detalle técnico de cada modelo → [`docs/ML.md`](docs/ML.md)
+
+---
+
+## 📊 Resultados reales
+
+Métricas de la última corrida de entrenamiento, guardadas en [`ml/models/*_metadata.json`](ml/models/). **Están sin maquillar a propósito** — la transparencia vale más que un número inflado.
+
+### Modelo IVT — clasificación de riesgo territorial
+
+| Métrica | Ensemble (RF + XGBoost) | XGBoost solo |
+|---|:--:|:--:|
+| Accuracy (test) | 72.2 % | **77.8 %** |
+| F1-macro (test) | 0.51 | **0.75** |
+| Validación cruzada (5-fold) | 0.49 ± 0.08 | — |
+
+**Variables más influyentes:** subíndice de fertilizantes UPRA (**0.22**), índice total UPRA (0.19), variación mensual de precios (0.13).
+👉 *El precio de los insumos agrícolas es el mayor predictor de vulnerabilidad* — exactamente lo que le pasó a Doña Carmen.
+
+### Clustering territorial
+7 perfiles con KMeans (silhouette **0.41**), desde 🟢 *«Condiciones favorables»* hasta 🔴 *«Riesgo alto: precios altos + déficit hídrico»*. DBSCAN complementa marcando los períodos atípicos.
+
+### Forecasting
+3 series proyectadas: índice de precios UPRA, precipitación y temperatura IDEAM (dic 2018 → abr 2026).
+
+> ### ⚠️ Nota honesta sobre la escala — léela antes de presentar
+> Los modelos están entrenados sobre **~89 registros mensuales de series nacionales** (base UPRA 2018-2026: 71 de entrenamiento, 18 de prueba), clasificados en tres niveles de riesgo. **No** sobre los 1.122 municipios de forma individual. La cifra de «1.122 municipios» corresponde a la **cobertura de referencia de conectividad** (DANE/MinTIC); la desagregación municipal es el **objetivo de escala**, no el estado actual. El dataset es pequeño y la clase `ALTA` está subrepresentada — por eso reportamos F1-macro y no solo accuracy.
+>
+> **Esta claridad es una fortaleza del proyecto, no una debilidad que ocultar.** Un jurado confía más en un proyecto que dice exactamente dónde está.
+
+---
+
+## 🏗️ Arquitectura
+
+<div align="center">
+<br>
+<img src="docs/figuras/figura1_arquitectura_capas.png" alt="Arquitectura por capas de Kwesx AI" width="820">
+<br>
+<em>Arquitectura por capas: datos → ETL → modelo unificado → IA → experiencia de usuario.</em>
+<br><br>
+</div>
+
+```
+┌────────────────────────────────────────────────────────────────────┐
+│                          KWESX AI                                   │
+├──────────────────┬───────────────────────┬─────────────────────────┤
+│    FRONTEND      │       BACKEND          │        IA / ML          │
+│   Next.js 14     │     FastAPI 0.111      │  Ensemble RF + XGBoost   │
+│   TypeScript 5   │     Python 3.11        │  KMeans + DBSCAN         │
+│   TailwindCSS    │     PostgreSQL 15      │  Holt-Winters + SARIMA   │
+│   React-Leaflet  │     PostGIS 3.4        │  Isolation Forest        │
+│   PWA (offline)  │     SQLAlchemy 2       │  SHAP (explicabilidad)   │
+│                  │     NLP TF-IDF         │  joblib (persistencia)   │
+├──────────────────┴───────────────────────┴─────────────────────────┤
+│                        PIPELINE ETL                                 │
+│   Socrata → Normalización → Modelo Territorial Unificado (MTU)      │
+│   Llave maestra: Código DANE · reintentos + backoff exponencial    │
+├─────────────────────────────────────────────────────────────────────┤
+│                   DATOS ABIERTOS — datos.gov.co                     │
+│      ANI · UPRA · IDEAM · DANE-MinTIC · MEN                         │
+└─────────────────────────────────────────────────────────────────────┘
+```
+
+Diseño técnico completo → [`docs/ARQUITECTURA.md`](docs/ARQUITECTURA.md)
+
+---
+
+## 🗂️ Las 5 fuentes de datos
+
+Todas con extractor propio en [`etl/extractors/`](etl/extractors/) — **100 % datos públicos colombianos.**
+
+| Fuente | Dataset | Contenido | Cobertura |
+|---|---|---|---|
+| **ANI** | `8yi9-t44c` | Tráfico vehicular en peajes | ~151.000 registros |
+| **UPRA** | `gwbi-fnzs` | Índice de precios de insumos agrícolas | 89 meses (2018-2026) |
+| **IDEAM** | `s54a-sgyg` · `sbwg-7ju4` | Precipitación y temperatura diaria | Nacional |
+| **DANE-MinTIC** | — | Conectividad municipal | 1.122 municipios (referencia) |
+| **MEN** | — | Cobertura educativa | Nacional |
+
+> **Sobre el respaldo sintético:** cuando la API de conectividad no está disponible, el extractor DANE-MinTIC genera datos de respaldo realistas **marcados explícitamente como `fuente='DANE-MinTIC-SIMULADO'`**. Es una medida de resiliencia para demos, no la base del proyecto: los modelos de riesgo agroclimático se alimentan de datos **reales** de ANI, UPRA e IDEAM.
+
+Diccionario de datos → [`docs/DATA_DICTIONARY.md`](docs/DATA_DICTIONARY.md) · Pipeline ETL → [`docs/ETL.md`](docs/ETL.md)
+
+---
+
+## ♿ Una plataforma, dos formas de entenderla
+
+| 🖥️ Modo Estándar | 🌾 Modo Fácil |
+|---|---|
+| Para técnicos e investigadores | Para campesinos y adultos mayores |
+| Tableros con datos detallados | Texto grande y lenguaje simple |
+| Filtros, capas y exportación | Una recomendación clara a la vez |
+| Vista geoespacial completa | Semáforos de riesgo por color |
+
+Ambos con accesibilidad **WCAG 2.2 AA** y funcionamiento **sin conexión** (PWA con service worker), porque diseñamos también para las comunidades desconectadas.
+
+---
+
+## 🚀 Instalación rápida
 
 ### Docker (recomendado — 1 comando)
 
 ```bash
-git clone https://github.com/Gei-del/kwesx-ai--.git
-cd kwesx-ai
+git clone https://github.com/Gei-del/Kwesx-AI--.git
+cd Kwesx-AI--
 cp .env.example .env
 make up
 ```
 
 | Servicio | URL |
-|----------|-----|
+|---|---|
 | Frontend | http://localhost:3000 |
 | API REST | http://localhost:8000 |
-| API Docs | http://localhost:8000/docs |
+| API Docs (Swagger) | http://localhost:8000/docs |
 | PostgreSQL | localhost:5433 (usuario `kwesx`) |
 
 ### Desarrollo local
@@ -68,198 +194,108 @@ make up
 **Requisitos:** Python 3.11+, Node.js 18+, PostgreSQL 15 + PostGIS
 
 ```bash
-# 1. Instalar dependencias Python
-pip install -r requirements.txt
-
-# 2. Configurar variables de entorno
-cp .env.example .env
-
-# 3. Inicializar base de datos
-# Con Docker: init.sql se ejecuta solo al primer arranque del contenedor (no hace falta este paso).
-# Manual (DB en puerto 5433):
-psql -h localhost -p 5433 -U kwesx -d kwesx_db -f db/init.sql
-
-# 4. Ejecutar ETL (cargar datos reales)
-python -m etl.pipeline --fuente all
-
-# 5. Entrenar modelo IA
-python -m ml.train
-
-# 6. Iniciar backend
-uvicorn backend.app.main:app --reload
-
-# 7. Iniciar frontend (nueva terminal)
-cd frontend && npm install && npm run dev
+pip install -r requirements.txt          # 1. Dependencias
+cp .env.example .env                      # 2. Variables de entorno
+python -m etl.pipeline --fuente all       # 3. Cargar datos reales
+python -m ml.train                        # 4. Entrenar IVT
+python -m ml.train_advanced               # 5. Clustering, forecast, anomalías
+uvicorn backend.app.main:app --reload     # 6. Backend
+cd frontend && npm install && npm run dev # 7. Frontend (nueva terminal)
 ```
+
+> Los modelos entrenados (`.pkl`) no se versionan en git; se generan con los pasos 4-5. Los `ml/models/*_metadata.json` sí están versionados y contienen las métricas de la última corrida.
+
+Guía de despliegue → [`docs/DESPLIEGUE.md`](docs/DESPLIEGUE.md) · Configuración → [`docs/CONFIGURACION.md`](docs/CONFIGURACION.md)
 
 ---
 
-## Arquitectura
+## 📁 Estructura del proyecto
 
 ```
-┌─────────────────────────────────────────────────────────────────────┐
-│                         KWESX AI v1.0                               │
-├─────────────────┬───────────────────────┬───────────────────────────┤
-│   FRONTEND      │       BACKEND         │       IA / ML             │
-│  Next.js 14     │     FastAPI 0.111     │  Random Forest (IVT)      │
-│  TypeScript 5   │     PostgreSQL 15     │  Feature Engineering      │
-│  TailwindCSS 3  │     PostGIS 3.4       │  NLP Keyword-Based (MVP)  │
-│  React 18       │     SQLAlchemy 2      │  Synthetic IDEAM Fallback │
-│  React-Leaflet  │     Alembic           │  Joblib Model Persistence │
-├─────────────────┴───────────────────────┴───────────────────────────┤
-│                      PIPELINE ETL                                    │
-│  SocrataExtractor → Normalizer → PostgresLoader → MTU Tables         │
-│  (ANI + UPRA + IDEAM) · Retry + Exponential Backoff · Dry-run mode  │
-├──────────────────────────────────────────────────────────────────────┤
-│                  DATOS ABIERTOS — datos.gov.co                       │
-│   ANI 8yi9-t44c · UPRA gwbi-fnzs · IDEAM s54a-sgyg + sbwg-7ju4     │
-└──────────────────────────────────────────────────────────────────────┘
-```
-
-Arquitectura detallada → [docs/ARQUITECTURA.md](docs/ARQUITECTURA.md)
-
----
-
-## Comandos Makefile
-
-```bash
-make up          # Levantar todo (Docker Compose)
-make down        # Apagar servicios
-make restart     # Reiniciar backend
-make logs        # Ver logs en vivo
-make etl         # Pipeline ETL completo (ANI + UPRA + IDEAM)
-make train       # Entrenar modelo IVT
-make test        # Correr suite de pruebas
-make lint        # Verificar calidad del código (flake8 + mypy)
-make format      # Formatear código (black + isort)
-make clean       # Limpiar cachés y archivos temporales
-make shell       # Shell dentro del contenedor API
-```
-
----
-
-## Estructura del proyecto
-
-```
-kwesx-ai/
-├── .github/              # CI/CD — GitHub Actions
-│   └── workflows/
-│       ├── ci.yml        # Tests + Lint en cada PR
-│       └── deploy.yml    # Deploy automático a producción
+Kwesx-AI--/
 ├── backend/              # API FastAPI (Clean Architecture)
-│   └── app/
-│       ├── main.py       # Entrypoint + CORS + Routers
-│       ├── config.py     # Settings (Pydantic)
-│       ├── database.py   # SQLAlchemy async session
-│       ├── models/       # ORM — Tablas del MTU
-│       └── routers/      # Controladores HTTP
-│           ├── datos.py      # /datos — ANI, UPRA, IDEAM
-│           ├── asistente.py  # /asistente — Chat NLP
-│           ├── prediccion.py # /prediccion — Modelo IVT
-│           └── salud.py      # /salud — Health checks
-├── etl/                  # Pipeline de ingesta de datos
-│   ├── config.py         # Dataset IDs + API settings
-│   ├── pipeline.py       # Orquestador CLI
-│   ├── extractors/       # Clientes Socrata API
-│   ├── transformers/     # Normalización + limpieza
-│   └── loaders/          # Inserción en PostgreSQL
-├── ml/                   # Machine Learning
-│   ├── features.py       # Feature engineering (UPRA + IDEAM)
-│   ├── modelo_territorial.py  # Random Forest IVT
-│   ├── train.py          # Script de entrenamiento
-│   ├── predict.py        # Servicio de inferencia
-│   └── models/           # Modelos entrenados (.pkl)
-├── frontend/             # Next.js 14 App Router
-│   └── src/
-│       ├── app/          # Páginas (Dashboard, Asistente, Datos, IVT)
-│       ├── components/   # UI Components (Layout, Cards, Charts, Map)
-│       ├── contexts/     # AppContext (accesibilidad, Modo Fácil)
-│       └── lib/          # API client tipado
-├── data/                  # Datos organizados por etapa del pipeline
-│   ├── 01_raw/           # Datos crudos de la API
-│   ├── 02_external/      # Datos de referencia (DANE, etc.)
-│   ├── 03_processed/     # Datos limpios y normalizados
-│   ├── 04_feature_store/ # Features para el modelo
-│   ├── 05_training/      # Datasets de entrenamiento
-│   ├── 06_validation/    # Datasets de validación
-│   └── 07_predictions/   # Predicciones históricas
-├── docs/                 # Documentación técnica completa
-├── tests/                # Suite de pruebas (unit + integration)
-│   ├── backend/
-│   ├── ml/
-│   └── etl/
-├── deploy/               # Configuraciones de despliegue
-│   ├── docker/
-│   ├── vercel/
-│   └── render/
-├── db/                   # Esquema de base de datos
-│   └── init.sql
-├── .env.example          # Variables de entorno de ejemplo
-├── docker-compose.yml    # Orquestación Docker
-├── Makefile              # Comandos de desarrollo
-├── pyproject.toml        # Configuración Python (black, mypy, pytest)
-└── requirements.txt      # Dependencias Python
+│   ├── app/routers/      # /datos /asistente /prediccion /ml /recomendaciones /salud
+│   ├── app/ml/           # NLP intent (TF-IDF) + recomendador
+│   ├── app/models/       # ORM — Modelo Territorial Unificado
+│   └── etl/extractors/   # DANE-MinTIC, MEN
+├── etl/                  # ANI, UPRA, IDEAM (Socrata) + normalización
+├── ml/                   # 5 modelos de IA
+│   ├── ensemble.py       # IVT: RF + XGBoost
+│   ├── clustering.py     # KMeans + DBSCAN
+│   ├── forecasting.py    # Holt-Winters + SARIMA
+│   ├── anomaly.py        # Isolation Forest
+│   ├── explainability.py # SHAP
+│   └── models/           # Metadata + modelos entrenados
+├── frontend/             # Next.js 14 — dashboard, asistente, mapas, modo fácil
+│   └── src/app/          # prediccion, riesgos, conectividad, educacion, datos/*
+├── deploy/               # Docker, Vercel, Render
+└── docs/                 # Documentación técnica + figuras + presentación
+    └── figuras/          # Diagramas de arquitectura y pitch deck (.pptx)
 ```
 
 ---
 
-## Concurso: Datos al Ecosistema 2026
-
-**Convocatoria:** Ministerio de TIC de Colombia + datos.gov.co  
-**Nivel:** Intermedio  
-**Entregas:** Entrega 1 (1 julio 2026) · Entrega 2 (13-17 julio 2026)
-
-**Propuesta de valor:** Democratizar el acceso a datos territoriales complejos mediante IA conversacional, visualizaciones intuitivas y accesibilidad universal — para que un campesino, una comunidad indígena o un investigador puedan comprender el estado de su territorio en menos de 2 minutos.
-
----
-
-## Documentación
+## 📚 Documentación completa
 
 | Documento | Descripción |
-|-----------|-------------|
-| [docs/ARQUITECTURA.md](docs/ARQUITECTURA.md) | Diseño técnico completo |
-| [docs/ROADMAP.md](docs/ROADMAP.md) | Plan de desarrollo y sprints |
-| [docs/BITACORA.md](docs/BITACORA.md) | Registro de decisiones técnicas |
-| [CONTRIBUTING.md](CONTRIBUTING.md) | Guía de contribución |
-| [SECURITY.md](SECURITY.md) | Política de seguridad |
-| [CHANGELOG.md](CHANGELOG.md) | Historial de cambios |
+|---|---|
+| 🎤 [`docs/figuras/Presentación Kwesx IA.pptx`](docs/figuras/Presentaci%C3%B3n%20Kwesx%20IA.pptx) | **Presentación / pitch deck para el jurado** |
+| [`docs/ARQUITECTURA.md`](docs/ARQUITECTURA.md) | Diseño técnico y capas del sistema |
+| [`docs/ML.md`](docs/ML.md) | Modelos de IA, entrenamiento y validación |
+| [`docs/ETL.md`](docs/ETL.md) | Pipeline de datos e integración de fuentes |
+| [`docs/DATA_DICTIONARY.md`](docs/DATA_DICTIONARY.md) | Diccionario de datos |
+| [`docs/DATABASE.md`](docs/DATABASE.md) | Modelo de base de datos |
+| [`docs/API.md`](docs/API.md) | Referencia de la API REST |
+| [`docs/DESPLIEGUE.md`](docs/DESPLIEGUE.md) | Guía de despliegue |
+| [`docs/ROADMAP.md`](docs/ROADMAP.md) | Plan de desarrollo |
+| [`docs/BITACORA.md`](docs/BITACORA.md) | Registro de decisiones técnicas |
+| [`docs/EQUIPO.md`](docs/EQUIPO.md) | Equipo del proyecto |
 
 ---
 
-## Contribuir
+## 👩‍💻 Equipo
 
-¿Quieres mejorar Kwesx AI? Lee [CONTRIBUTING.md](CONTRIBUTING.md).
+Somos **2 personas** con roles claros:
+
+| Nombre | Rol |
+|---|---|
+| **Geidy Ponton** | Desarrollo de software y ciencia de datos — backend, ETL, modelos de IA y frontend |
+| **Nelcy Ponton** | Gestión, documentación, formato APA, pitch y video demostrativo |
 
 ---
 
-## Licencia
+## 🌱 Roadmap
+
+| Hoy | v1.1 | v2.0 |
+|---|---|---|
+| 5 fuentes + 5 modelos en producción | Alertas push al ciudadano | API pública abierta |
+| Modo Estándar + Modo Fácil | Desagregación municipal completa | Lenguas indígenas: Wayuunaiki · Nasa Yuwe |
+
+Kwesx AI no es un punto final. Está construida para **crecer con Colombia.**
+
+---
+
+## 🏆 Concurso: Datos al Ecosistema 2026
+
+**Convocatoria:** Ministerio TIC de Colombia + datos.gov.co · **Nivel:** Intermedio
+
+**Propuesta de valor:** democratizar el acceso a datos territoriales complejos mediante IA conversacional, visualizaciones intuitivas y accesibilidad universal — para que un campesino, una comunidad indígena o un investigador comprendan el estado de su territorio en **menos de dos minutos.**
+
+---
+
+## 📄 Licencia
 
 MIT © 2026 — Kwesx AI Team. Ver [LICENSE](LICENSE).
 
----
-
 <div align="center">
-Hecho con ❤️ para Colombia · Datos oficiales de <a href="https://datos.gov.co">datos.gov.co</a>
+<br>
+
+### Los datos de Colombia ya existen. Lo que falta es la inteligencia que los traduzca en decisiones.
+
+**Eso es Kwesx AI.**
+
+<br>
+
+Hecho con ❤️ para Colombia · Datos oficiales de [datos.gov.co](https://datos.gov.co)
+
 </div>
-
-> Documento base del proyecto: `Kwesx_AI_Documentacion_Profesional.docx` (visión completa, sin recorte de alcance).
-> Los documentos en `docs/` son la versión de trabajo, ajustada a un sprint de **menos de 1 mes**.
-
-## Cómo navegar este repo
-
-| Carpeta / Archivo | Qué contiene |
-|---|---|
-| `docs/ROADMAP.md` | Plan semana a semana. **Empieza aquí** para saber en qué fase estamos. |
-| `docs/ARQUITECTURA.md` | Stack técnico, capas del sistema, modelo de datos (Modelo Territorial Unificado). |
-| `docs/BITACORA.md` | Diario cronológico: qué se decidió, qué se construyó y por qué, sesión por sesión. |
-| `docs/EQUIPO.md` | Quién es quién y qué rol cumple cada persona del equipo. |
-| `backend/` | API en Python (FastAPI). Lógica de negocio, ETL, modelos de IA. |
-| `frontend/` | Aplicación web en Next.js/React (dashboard, asistente, mapas). |
-| `etl/` | Scripts de extracción, limpieza e integración de datasets. |
-| `data/` | Datos crudos (`raw/`) y procesados (`processed/`). **No se sube a git** (ver `.gitignore`). |
-
-## Estado actual
-
-✅ **Versión 1.0.0 — MVP completo y funcional** (Entrega 2 del concurso, julio 2026): ETL con 5 fuentes de datos, 5 modelos de ML, asistente conversacional, dashboard, mapa interactivo y accesibilidad WCAG 2.2 AA.
-
-Ver `docs/BITACORA.md` para el historial completo de desarrollo y `CHANGELOG.md` para el detalle de la versión.
