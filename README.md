@@ -98,10 +98,8 @@ Métricas de la última corrida de entrenamiento, guardadas en [`ml/models/*_met
 ### Forecasting
 3 series proyectadas: índice de precios UPRA, precipitación y temperatura IDEAM (dic 2018 → abr 2026).
 
-> ### ⚠️ Nota honesta sobre la escala — léela antes de presentar
+> ### ⚠️ Nota honesta sobre la escala
 > Los modelos están entrenados sobre **~89 registros mensuales de series nacionales** (base UPRA 2018-2026: 71 de entrenamiento, 18 de prueba), clasificados en tres niveles de riesgo. **No** sobre los 1.122 municipios de forma individual. La cifra de «1.122 municipios» corresponde a la **cobertura de referencia de conectividad** (DANE/MinTIC); la desagregación municipal es el **objetivo de escala**, no el estado actual. El dataset es pequeño y la clase `ALTA` está subrepresentada — por eso reportamos F1-macro y no solo accuracy.
->
-> **Esta claridad es una fortaleza del proyecto, no una debilidad que ocultar.** Un jurado confía más en un proyecto que dice exactamente dónde está.
 
 ---
 
